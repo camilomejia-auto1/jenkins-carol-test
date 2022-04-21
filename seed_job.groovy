@@ -11,7 +11,7 @@ freeStyleJob("seed") {
     git {
       remote {
         github(jobs_repo)
-        branck(track_branch)
+        branch(track_branch)
       }
     }
   }
