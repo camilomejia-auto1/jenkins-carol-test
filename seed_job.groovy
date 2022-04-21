@@ -13,6 +13,20 @@ freeStyleJob("seed") {
         github(jobs_repo)
         branch(track_branch)
       }
+      extensions {
+        cleanBeforeCheckout()
+      }
+    }
+  }
+
+  triggers {
+    githubPush()
+  }
+
+  steps {
+    dsl {
+      external "*.groovy"
+      external "jobs/**/*.groovy"
     }
   }
 }
