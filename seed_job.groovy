@@ -5,7 +5,7 @@ freeStyleJob("seed") {
   displayName("seed_job")
   description("Create jobs from dsl files")
   logRotator(30, 90)
-  label("master")
+  label("built-in")
 
   scm {
     git {
