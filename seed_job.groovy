@@ -27,6 +27,7 @@ freeStyleJob("seed") {
     dsl {
       external "*.groovy"
       external "jobs/**/*.groovy"
+      removeAction('DELETE')
     }
   }
 }
