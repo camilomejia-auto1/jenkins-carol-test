@@ -3,7 +3,7 @@ def track_branch = 'master'
 
 freeStyleJob("seed") {
   displayName("seed_job")
-  description("Create jobs from dsl files test")
+  description("Create jobs from dsl files")
   logRotator(30, 90)
   label("built-in")
 
@@ -26,7 +26,7 @@ freeStyleJob("seed") {
   steps {
     dsl {
       external "*.groovy"
-      // external "jobs/**/*.groovy"
+      external "jobs/**/*.groovy"
     }
   }
 }
