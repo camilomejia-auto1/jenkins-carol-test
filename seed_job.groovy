@@ -4,7 +4,7 @@ def track_branch = 'master'
 freeStyleJob("seed") {
   displayName("seed_job")
   description("Create jobs from dsl files")
-  logRotator(30. 90)
+  logRotator(30, 90)
   label("master")
 
   scm {
