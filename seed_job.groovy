@@ -3,7 +3,7 @@ def track_branch = 'master'
 
 freeStyleJob("seed") {
   displayName("seed_job")
-  description("Create jobs from dsl files")
+  description("Create jobs from dsl files test")
   logRotator(30, 90)
   label("built-in")
 
