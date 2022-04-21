@@ -26,7 +26,7 @@ freeStyleJob("seed") {
   steps {
     dsl {
       external "*.groovy"
-      external "jobs/**/*.groovy"
+      // external "jobs/**/*.groovy"
     }
   }
 }
