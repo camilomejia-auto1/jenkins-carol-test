@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    label 'docker-builder'
+    label 'built-in'
   }
 
   options {
