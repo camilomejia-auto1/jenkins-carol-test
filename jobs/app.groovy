@@ -10,7 +10,7 @@ pipelineJob('refurbishment/carol') {
     cpsScm {
       scm {
         git {
-          branch('origin/develop')
+          branch('origin/master')
           remote {
             github('camilomejia-auto1/jenkins-carol-test')
           }
