@@ -1,6 +1,11 @@
 folder('refurbishment') {
   displayName('Refurbishment')
   description("Folder for refurbishment's jobs")
+}
+
+folder('refurbishment/carol') {
+  displayName('Carol')
+  description("Folder for refurbishment's jobs")
 
   properties {
     folderLibraries {
@@ -24,8 +29,8 @@ folder('refurbishment') {
   }
 }
 
-pipelineJob('refurbishment/carol') {
-  displayName('Carol app')
+pipelineJob('refurbishment/carol/app-deployment') {
+  displayName('QA App Deployment')
 
   definition {
     cpsScm {
@@ -47,12 +52,13 @@ pipelineJob('refurbishment/carol') {
   }
 }
 
-pipelineJob("refurbishment/clean-fe") {
+pipelineJob("refurbishment/carol/app-clean-infra") {
+  displayName('App Clean Infra')
   description("Clean env, leave only existing branches")
 
   definition {
     cps {
-      script(readFileFromWorkspace('jobs/Jenkinsfile'))
+      script(readFileFromWorkspace('jobs/carol/app-clean-infra/Jenkinsfile'))
       sandbox()
     }
   }
