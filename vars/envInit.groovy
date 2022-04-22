@@ -1,3 +1,3 @@
 def call() {
-  sh "init env"
+  sh "echo init env"
 }
