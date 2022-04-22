@@ -1,5 +1,5 @@
 folder('refurbishment') {
-  displayName('Refurbishment 3')
+  displayName('Refurbishment')
   description("Folder for refurbishment's jobs")
 
   properties {
