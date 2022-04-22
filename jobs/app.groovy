@@ -12,7 +12,7 @@ folder('refurbishment') {
             scmSourceRetriever {
               scm {
                 gitSCMSource {
-                  remote("camilomejia-auto1/jenkins-carol-test")
+                  remote("git@github.com:camilomejia-auto1/jenkins-carol-test")
                 }
               }
             }
@@ -44,5 +44,20 @@ pipelineJob('refurbishment/carol') {
         }
       }
     }
+  }
+}
+
+pipelineJob("refurbishment/clean-fe") {
+  description("Clean env, leave only existing branches")
+
+  definition {
+    cps {
+      script(readFileFromWorkspace('jobs/Jenkinsfile'))
+      sandbox()
+    }
+  }
+
+  triggers {
+    cron('@daily')
   }
 }
