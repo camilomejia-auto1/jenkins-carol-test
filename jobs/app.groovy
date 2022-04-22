@@ -12,7 +12,7 @@ folder('refurbishment') {
             scmSourceRetriever {
               scm {
                 gitSCMSource {
-                  remote("git@github.com:camilomejia-auto1/jenkins-carol-test")
+                  remote("https://github.com/camilomejia-auto1/jenkins-carol-test.git")
                 }
               }
             }
