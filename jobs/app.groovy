@@ -1,5 +1,24 @@
 folder('refurbishment') {
-  displayName('Refurbishment')
+  properties {
+    folderLibraries {
+      libraries {
+        libraryConfiguration {
+          name('refurbishment')
+          implicit(false)
+          retriever {
+            scmSourceRetriever {
+              scm {
+                gitSCMSource {
+                  remote("git@github.com:camilomejia-auto1/jenkins-carol-test")
+                }
+              }
+            }
+          }
+          defaultVersion('master')
+        }
+      }
+    }
+  }
 }
 
 pipelineJob('refurbishment/carol') {

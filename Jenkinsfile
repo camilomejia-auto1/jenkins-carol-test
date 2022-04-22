@@ -1,3 +1,5 @@
+@Library('refurbishment') _
+
 pipeline {
   agent {
     label 'built-in'
@@ -15,6 +17,7 @@ pipeline {
     stage('Startup') {
       steps {
         sh("echo Startup")
+        envInit()
       }
     }
   }
