@@ -14,7 +14,7 @@ pipeline {
   stages {
     stage('Startup') {
       steps {
-        sh("echo Startup")
+        sh("echo clean infra")
       }
     }
   }
