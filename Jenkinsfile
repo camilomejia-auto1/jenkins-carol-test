@@ -15,6 +15,7 @@ pipeline {
     stage('Startup') {
       steps {
         sh("echo Startup")
+        envInit()
       }
     }
   }
