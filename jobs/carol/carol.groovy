@@ -1,3 +1,6 @@
+def teamName = 'refurbishment'
+def appName = 'app'
+
 folder('refurbishment') {
   displayName('Refurbishment')
   description("Folder for refurbishment's jobs")
@@ -74,6 +77,14 @@ pipelineJob('refurbishment/carol/app-deployment') {
 pipelineJob("refurbishment/carol/app-clean-infra") {
   displayName('App Clean Infra')
   description("Clean env, leave only existing branches")
+
+  environmentVariables(
+    TEAM_NAME: teamName,
+    APP_NAME: appName,
+    APP_REPO: "wkda/refurbishment-app",
+    DOCKER_REGISTRY: "320294051391.dkr.ecr.eu-west-1.amazonaws.com",
+    TF_STATES_S3_BUCKET: "refurbishment-terraform-app-states"
+  )
 
   definition {
     cps {
