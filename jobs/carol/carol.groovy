@@ -1,5 +1,4 @@
 def teamName = 'refurbishment'
-def appName = 'app'
 
 folder('refurbishment') {
   displayName('Refurbishment')
@@ -77,6 +76,8 @@ pipelineJob('refurbishment/carol/app-deployment') {
 pipelineJob("refurbishment/carol/app-clean-infra") {
   displayName('App Clean Infra')
   description("Clean env, leave only existing branches")
+
+  def appName = 'app2'
 
   environmentVariables(
     TEAM_NAME: teamName,
